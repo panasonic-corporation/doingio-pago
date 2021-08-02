@@ -77,9 +77,9 @@ PA!GOはGoogleのオープンソース画像識別モデルMobileNetV2をベー�
 
 1. マイクロSDカードをPCに挿入します
 
-1. [pago_beta.img]()をダウンロードします
+1. [pago.img.zip](https://github.com/panasonic-corporation/doingio-pago/releases/download/1.0/pago.img.zip)をダウンロードします
 
-1. Raspberry Pi Imagerを起動し、先程のpago_beta.imgをSDカードに書き込みます
+1. Raspberry Pi Imagerを起動し、先程のpago.img.zipをSDカードに書き込みます
 
 1. Raspberry Pi Zero WHをWi-Fiに接続するための設定を行います。（ビューワーを使用しない場合はこのステップは飛ばしてください）
 
@@ -111,16 +111,16 @@ Wi-Fiの設定方法は2通りあります。
 
 1. SDカードドライブ内のbootパーティション直下に、wpa_supplicant.confを作成し、以下のように内容を書き込み保存します
 
-```
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-country=COUNTRY_CODE
-network={
-    ssid="NETWORK_NAME"
-    psk="NETWORK_PASSWORD"
-}
-```
-COUNTRY_CODE は、[ISO/IEC code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements)を参照の上、適切な文字に置き換えてください。(アメリカならUS、日本ならJAです)
+    ```
+    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+    update_config=1
+    country=COUNTRY_CODE
+    network={
+        ssid="NETWORK_NAME"
+        psk="NETWORK_PASSWORD"
+    }
+    ```
+    COUNTRY_CODE は、[ISO/IEC code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements)を参照の上、適切な文字に置き換えてください。(アメリカならUS、日本ならJAです)
 
 1. SDカードを取り出し、Raspberry Pi Zero WHに挿入し、電源を入れてください
 
@@ -140,72 +140,72 @@ ssh pi@raspberrypi.local
 
 1. A4の紙にデザインテンプレートを印刷します。 必ず等倍で印刷してください。
 
-  - テンプレートA ([pago_template_A.pdf](data/pago_template_A.pdf))
+    - テンプレートA ([pago_template_A.pdf](data/pago_template_A.pdf))
 
-    <img width="500px" src="images/pago_template_A.jpg">
+        <img width="500px" src="images/pago_template_A.jpg">
 
-  - テンプレートB ([pago_template_B.pdf](data/pago_template_B.pdf))
+    - テンプレートB ([pago_template_B.pdf](data/pago_template_B.pdf))
 
-    <img width="500px" src="images/pago_template_B.jpg">
+        <img width="500px" src="images/pago_template_B.jpg">
 
-  - テンプレートC ([pago_template_C.pdf](data/pago_template_C.pdf))
+    - テンプレートC ([pago_template_C.pdf](data/pago_template_C.pdf))
 
-    <img width="500px" src="images/pago_template_C.jpg">
+        <img width="500px" src="images/pago_template_C.jpg">
 
 
 1. 印刷したデザインテンプレートの外枠を切り取ります（内側の実線や点線は切り取らないでください）
 
-  <img width="500px" src="images/1.jpg">
-  <img width="500px" src="images/2.jpg">
+    <img width="500px" src="images/1.jpg">
+    <img width="500px" src="images/2.jpg">
 
 1. 紙コップにのりでデザインテンプレートを貼り付けます
 
-  <img width="500px" src="images/3.jpg">
-  <img width="500px" src="images/4.jpg">
+    <img width="500px" src="images/3.jpg">
+    <img width="500px" src="images/4.jpg">
 
 1. カッターで内側の実線部分を紙コップごと切り取ります
 
-  <img width="500px" src="images/5.jpg">
-  <img width="500px" src="images/6.jpg">
+    <img width="500px" src="images/5.jpg">
+    <img width="500px" src="images/6.jpg">
 
 1. 切り取った長方形の穴に、裏側からマスキングテープを貼ります
 
-  <img width="500px" src="images/7.jpg">
+    <img width="500px" src="images/7.jpg">
 
 1. 点線の円の中に小さな穴をパンチングするか、きりなどで小さい穴を開けます
 
-  <img width="500px" src="images/8.jpg">
+    <img width="500px" src="images/8.jpg">
 
 1. 紙コップの内部パーツを作成します
 
-  - 【3Dプリンタを持っている場合】下記データを3Dプリンタで出力して手順14へ
+    - 【3Dプリンタを持っている場合】下記データを3Dプリンタで出力して手順14へ
 
-    [pago_rib.stl](data/pago_rib.stl)
+      [pago_rib.stl](data/pago_rib.stl)
 
-    <img width="300px" src="images/3d_inner_housing.png">
+      <img width="300px" src="images/3d_inner_housing.png">
 
-  - 【3Dプリンタを持っていない場合】下記データを紙に印刷して次の手順へ
+    - 【3Dプリンタを持っていない場合】下記データを紙に印刷して次の手順へ
 
-    [pago_inner_housing.pdf](data/pago_inner_housing.pdf)
+      [pago_inner_housing.pdf](data/pago_inner_housing.pdf)
 
-    <img width="500px" src="images/pago_inner_housing.jpg">
+      <img width="500px" src="images/pago_inner_housing.jpg">
 
 1. 印刷した内部パーツの設計図右側の図形を切り取ります
 
-  <img width="500px" src="images/9.jpg">
+    <img width="500px" src="images/9.jpg">
 
 1. 切り取った図形をダンボールにあて、頂点部分にペンで印をつけます
 
-  <img width="500px" src="images/10.jpg">
+    <img width="500px" src="images/10.jpg">
 
 1. 頂点同士を結びます
 
-  <img width="500px" src="images/11.jpg">
+    <img width="500px" src="images/11.jpg">
 
 1. 先に沿ってダンボールを切り取ります。
 
-  <img width="500px" src="images/12.jpg">
-  <img width="500px" src="images/13.jpg">
+    <img width="500px" src="images/12.jpg">
+    <img width="500px" src="images/13.jpg">
 
 1. 使っているダンボールの厚さに応じて、すべて重ねたときに15mmになるように複数枚同様に切り取ります。
 
@@ -213,51 +213,51 @@ ssh pi@raspberrypi.local
 
 1. M5Stack用デュアルボタンユニットにGroveケーブルを取り付け、裏側に両面テープを貼り、下の写真のとおり内部パーツに貼り付けます。このとき、ケーブルが向かって右側に来るようにしてください。
 
-  <img width="500px" src="images/14.jpg">
+    <img width="500px" src="images/14.jpg">
 
 1. Raspberry Pi camera module v2のフィルムを取り除いてください
 
-  <img width="500px" src="images/15.jpg">
+    <img width="500px" src="images/15.jpg">
 
 1. Raspberry Pi camera module v2からケーブルを外します
 
-  <img width="500px" src="images/16.jpg">
+    <img width="500px" src="images/16.jpg">
 
 1. Raspberry Pi camera module v2にRaspberry Pi Zero 用カメラケーブルを取り付けます
 
-  <img width="500px" src="images/17.jpg">
+    <img width="500px" src="images/17.jpg">
 
 1. Raspberry Pi Zero WHにReSpeaker 2-Mics Pi HATを接続します
 
-  <img width="500px" src="images/18.jpg">
+    <img width="500px" src="images/18.jpg">
 
 1. Raspberry Pi Zero WHに下記の写真のようにケーブルなどを配線します
 
-  <img width="500px" src="images/19.jpg">
+    <img width="500px" src="images/19.jpg">
 
 1. Raspberry Pi Zero WHの裏側に粗面用両面テープを貼り、下の写真のとおり内部パーツにRaspberry Pi Zero WHを貼り付けます（少し向かって左につけてください）
 
-  <img width="500px" src="images/20.jpg">
+    <img width="500px" src="images/20.jpg">
 
 1. スピーカーの裏側に粗面用両面テープを貼り付け、下の写真の通り内部パーツにスピーカーを貼り付けます
 
-  <img width="500px" src="images/21.jpg">
-  <img width="500px" src="images/22.jpg">
+    <img width="500px" src="images/21.jpg">
+    <img width="500px" src="images/22.jpg">
 
 1. 下の写真の通り、カメラに粗面用両面テープを貼り付け、紙コップのフタの飲み口部分からカメラのレンズが出るようにします
 
-  <img width="500px" src="images/23.jpg">
-  <img width="500px" src="images/24.jpg">
-  <img width="500px" src="images/25.jpg">
+    <img width="500px" src="images/23.jpg">
+    <img width="500px" src="images/24.jpg">
+    <img width="500px" src="images/25.jpg">
 
 1. 紙コップに部品を貼り付けた内部パーツやバッテリー、USB Acceleratorなど全てのパーツを下の写真の通り入れます
 
-  <img width="300px" src="images/26.jpg">
-  <img width="300px" src="images/27.jpg">
+    <img width="300px" src="images/26.jpg">
+    <img width="300px" src="images/27.jpg">
 
 1. モバイルバッテリーの電源を入れ、フタをしめたら完成です。2-3分程すると「Ready」という声がします。
 
-  <img width="500px" src="images/28.jpg">
+    <img width="500px" src="images/28.jpg">
 
 ### 使い方
 
@@ -281,28 +281,28 @@ PA!GOはデフォルトで植物を認識できるようになっています。
 
 1.	PCとRaspberry Piが同じネットワークに接続されていることを確認し、ターミナルから以下のコマンドを実行します
 
-```
-ssh pi@raspberrypi.local
-Password : raspberry
-```
+    ```
+    ssh pi@raspberrypi.local
+    Password : raspberry
+    ```
 
 2.	PA!GOのメインサービスを停止させます
 
-```
-sudo systemctl stop pago
-```
+    ```
+    sudo systemctl stop pago
+    ```
 
 3.	insectモードでPA!GOのプログラムを実行します
 
-```
-sudo python3 ~/pago_coral/src/pago.py --category insect
-```
+    ```
+    sudo python3 ~/pago_coral/src/pago.py --category insect
+    ```
 
 4.	再起動後も同じ設定を引き継がせたい場合はsystemdファイルを書き換えます。
 
-``` /etc/systemd/system/pago.service ```ファイルの、
+    ``` /etc/systemd/system/pago.service ```ファイルの、
 
-```--category plant```を```--category insect```に書き換えてください。
+    ```--category plant```を```--category insect```に書き換えてください。
 
 
 #### Viewerを使う
@@ -311,40 +311,40 @@ sudo python3 ~/pago_coral/src/pago.py --category insect
 
 1.	PCとRaspberry Piが同じネットワークに接続されていることを確認し、ターミナルから以下のコマンドを実行します
 
-```
-ssh pi@raspberrypi.local
-Password : raspberry
-```
+    ```
+    ssh pi@raspberrypi.local
+    Password : raspberry
+    ```
 
 2. 以下のリンクの手順に従って、Custom Search PanelからCustom Search EngineのCunstomSearchIDを取得します
 
-  [https://developers.google.com/custom-search/docs/tutorial/creatingcse#defining_a_custom_search_engine_in_control_panel](https://developers.google.com/custom-search/docs/tutorial/creatingcse#defining_a_custom_search_engine_in_control_panel)
+    [https://developers.google.com/custom-search/docs/tutorial/creatingcse#defining_a_custom_search_engine_in_control_panel](https://developers.google.com/custom-search/docs/tutorial/creatingcse#defining_a_custom_search_engine_in_control_panel)
 
-  **Sites to search** には images.google.com. を設定してください
+    **Sites to search** には images.google.com. を設定してください
 
-  CustomSearchIDを書き留めておきます
+    CustomSearchIDを書き留めておきます
 
 3.	以下のリンクの手順に従って、Custom Search JSON APIのAPI Keyを取得します
 
-  [https://developers.google.com/custom-search/v1/overview](https://developers.google.com/custom-search/v1/overview)
+    [https://developers.google.com/custom-search/v1/overview](https://developers.google.com/custom-search/v1/overview)
 
-  API Keyを書き留めておきます
+    API Keyを書き留めておきます
 
 4.	/boot/VIEWER/api_key.jsonにCustomSearchIDとAPI Keyを記入します
 
-```
-/boot/VIEWER/api_key.json
+    ```
+    /boot/VIEWER/api_key.json
 
-{
-	“GOOGLE_API_KEY”: “YOUR API KEY”,
-	“CUSTOM_SEARCH_API_ID”:”YOUR CUSTOM SEARCH ID”
-}
-```
+    {
+    	“GOOGLE_API_KEY”: “YOUR API KEY”,
+    	“CUSTOM_SEARCH_API_ID”:”YOUR CUSTOM SEARCH ID”
+    }
+    ```
 
 5. 同じネットワークに接続されているPCやスマートフォンのブラウザからRaspberry Piに接続します。
 
-  下記URLを入力しアクセスしてください。
-  [http://raspberrypi.local:8080](http://raspberrypi.local:8080)
+    下記URLを入力しアクセスしてください。
+    [http://raspberrypi.local:8080](http://raspberrypi.local:8080)
 
 
 #### Step2: Viewerの操作方法
