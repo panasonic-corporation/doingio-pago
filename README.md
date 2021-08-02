@@ -12,9 +12,6 @@ PA!GOは、デバイス上でAIを実行するためにGoogleが開発したプ�
 
 そしてどこにでもあるリモコンという道具を、スクリーンに頼ることなく、見たこともないような方法で子どもたちが実際の世界に触れ合うことができる道具にできないか、と考えました。
 
-**ソースコードは別リポジトリです**
-<br>[https://github.com/panasonic-corporation/doingio-pago](https://github.com/panasonic-corporation/doingio-pago)
-
 ### How it works
 
 PA!GOはGoogleのTensorFlowプラットフォームと、[Coral USB Accelerator](https://coral.withgoogle.com/products/accelerator)を利用しています。USB AcceleratorにはEdge TPUが搭載され、USB 2.0インターフェースでRaspberry Pi Zero dev boardに接続されています。
